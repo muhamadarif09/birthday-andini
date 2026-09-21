@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#3a243d">
+  <meta name="description" content="Sebuah perjalanan ulang tahun kecil yang dibuat khusus untuk Andini Zahari.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Untuk Andini">
+  <title>Untuk Andini — Sebuah Cerita Ulang Tahun</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./assets/icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css?v=14">
+  <link rel="stylesheet" href="./css/animations.css?v=14">
+  <link rel="stylesheet" href="./css/responsive.css?v=14">
+</head>
+<body>
+  <a class="skip-link" href="#home">Lewati ke isi utama</a>
+  <div class="ambient" aria-hidden="true">
+    <span class="blob blob-one"></span><span class="blob blob-two"></span>
+    <div id="ambient-particles"></div>
+  </div>
+
+  <section id="gift-screen" class="experience-screen gift-screen" aria-labelledby="gift-title">
+    <div class="gift-copy">
+      <p class="eyebrow light">Sebuah dunia kecil, dibungkus untuk satu orang</p>
+      <h1 id="gift-title">Ada sesuatu buat kamu...</h1>
+      <p>Sentuh hadiahnya, Andini <span aria-hidden="true">♥</span></p>
+    </div>
+    <button id="gift-button" class="gift" aria-label="Buka hadiah untuk Andini">
+      <span class="gift-glow"></span>
+      <span class="gift-lid"><span class="gift-bow">♡</span></span>
+      <span class="gift-box"><span class="gift-ribbon"></span></span>
+      <span class="gift-shadow"></span>
+    </button>
+    <p class="tiny-hint">Tenang, kamu akan dipandu langkah demi langkah</p>
+  </section>
+
+  <section id="intro-screen" class="experience-screen intro-screen is-hidden" aria-labelledby="intro-name">
+    <div class="intro-orbit" aria-hidden="true"><span>✦</span><span>♡</span><span>✦</span></div>
+    <div class="intro-content">
+      <p class="intro-kicker">Happy Birthday</p>
+      <h1 id="intro-name">ANDINI ZAHARI</h1>
+      <p id="intro-quote" class="intro-quote"></p>
+      <button id="start-journey" class="button button-light intro-cta">Mulai Perjalanannya <span aria-hidden="true">→</span></button>
+    </div>
+  </section>
+
+  <div id="site-shell" class="site-shell is-hidden">
+    <header class="journey-header">
+      <div class="mini-brand"><span>A</span><strong>untuk Andini</strong></div>
+      <div class="step-status" aria-live="polite">
+        <small>PERJALANANMU</small>
+        <strong>Bagian <span id="current-step">1</span> dari <span id="total-steps">5</span></strong>
+      </div>
+      <div class="header-actions">
+        <button id="music-toggle" class="icon-button" aria-label="Nyalakan musik" title="Musik">🔇</button>
+        <button id="install-app" class="icon-button" aria-label="Pasang di ponsel" title="Pasang di ponsel">↓</button>
+        <button id="settings-toggle" class="icon-button" aria-label="Buka pengaturan" title="Pengaturan">⋯</button>
+      </div>
+      <div id="settings-menu" class="settings-menu" hidden>
+        <p>Pengaturan</p>
+        <button id="reset-experience" class="text-button">↻ Mulai dari awal</button>
+      </div>
+      <div class="step-track" aria-hidden="true"><span id="step-track-fill"></span></div>
+    </header>
+
+    <main id="journey-main">
+      <section id="home" class="page-section active" data-step="0" aria-labelledby="home-title">
+        <div class="section-wrap hero">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Langkah 1 · Selamat Datang</p>
+            <h1 id="home-title">Hari ini,<br><em>semuanya tentang kamu.</em></h1>
+            <p id="home-message" class="hero-description"></p>
+            <div class="love-counter"><span>♥</span><div><strong id="days-counter">∞</strong><small>hari dan masih terus memilihmu</small></div></div>
+            <button class="button button-primary journey-next" data-next="letter">Lanjut: Baca Surat Untukmu <span>→</span></button>
+            <p class="next-hint">Ketuk tombol ini untuk melanjutkan ke langkah 2</p>
+          </div>
+          <div class="hero-art reveal" aria-label="Ilustrasi buket bunga ulang tahun">
+            <div class="moon-card">
+              <div class="card-stars">✦ · ✧ · ✦</div>
+              <div class="bouquet" aria-hidden="true"><span class="flower f1">✿</span><span class="flower f2">❀</span><span class="flower f3">✿</span><span class="stem s1"></span><span class="stem s2"></span><span class="stem s3"></span><span class="leaf l1">❧</span><span class="leaf l2">❧</span></div>
+              <p>untuk perempuan yang membuat<br>hari biasa terasa istimewa</p>
+              <span class="wax-seal easter-heart" role="button" tabindex="0" aria-label="Hati rahasia">♥</span>
+            </div>
+            <span class="floating-note note-one">manusia favoritku ✦</span>
+            <span class="floating-note note-two">satu-satunya</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="letter" class="page-section" data-step="1" aria-labelledby="letter-title">
+        <div class="section-wrap narrow">
+          <div class="section-heading centered reveal"><p class="eyebrow">Langkah 2 · Surat Untukmu</p><h2 id="letter-title">Ada kata-kata yang ingin kusimpan lebih lama</h2><p>Karena beberapa perasaan terlalu berharga untuk hanya lewat di ruang obrolan.</p></div>
+          <div id="envelope" class="envelope reveal">
+            <div class="envelope-back"></div>
+            <article class="letter-paper"><span class="letter-flower">❀</span><p class="letter-date" id="letter-date"></p><h3 id="letter-greeting"></h3><div id="letter-body"></div><p class="letter-signoff" id="letter-signoff"></p></article>
+            <div class="envelope-front"></div>
+            <button id="open-letter" class="wax-button" aria-label="Buka surat cinta">♥<span>Buka suratnya</span></button>
+          </div>
+          <div id="letter-after" class="after-action" hidden><p>Surat pertama selesai. Masih ada cerita kecil setelah ini.</p></div>
+          <div class="journey-controls"><button class="button button-ghost journey-back" data-back="home">← Kembali</button><button class="button button-primary journey-next" data-next="memories">Lanjut: Lihat Kenangan →</button></div>
+        </div>
+      </section>
+
+      <section id="memories" class="page-section" data-step="2" aria-labelledby="memories-title">
+        <div class="section-wrap">
+          <div class="section-heading reveal"><div><p class="eyebrow">Langkah 3 · Empat Kenangan Kita</p><h2 id="memories-title">Hal-hal kecil yang tak ingin kulupakan</h2></div><p>Empat potongan waktu yang selalu layak disimpan dengan indah.</p></div>
+          <div id="memory-grid" class="memory-grid"></div>
+          <div class="journey-controls"><button class="button button-ghost journey-back" data-back="letter">← Kembali</button><button class="button button-primary journey-next" data-next="pedia">Lanjut: Buka Ensiklopedia →</button></div>
+        </div>
+      </section>
+
+      <section id="pedia" class="page-section" data-step="3" aria-labelledby="pedia-title">
+        <div class="section-wrap">
+          <div class="pedia-masthead reveal"><div><p class="journal-label">LANGKAH 4 · JURNAL PENEMUAN YANG SANGAT PENTING</p><h2 id="pedia-title" class="clickable-name" tabindex="0">Ensiklopedia Andini</h2><p class="latin">Kumpulan istilah ilmiah yang belum diakui dunia, tetapi terbukti di hatiku</p></div><span class="issue-stamp">EDISI 01<br>BUCIN SAH</span></div>
+          <div class="encyclopedia-intro reveal"><span class="encyclopedia-mark">AZ</span><p>Arsip penelitian terhadap fenomena-fenomena aneh yang selalu berujung pada satu kesimpulan: Andini memang tidak bisa dijelaskan dengan ilmu pengetahuan biasa.</p></div>
+          <div id="encyclopedia-grid" class="encyclopedia-grid"></div>
+          <p class="encyclopedia-footnote reveal">Catatan redaksi: seluruh penelitian telah ditinjau oleh satu orang yang sangat tidak netral.</p>
+          <div class="journey-controls"><button class="button button-ghost journey-back" data-back="memories">← Kembali</button><button class="button button-primary journey-next" data-next="rose">Lanjut: Temui Mawarnya →</button></div>
+        </div>
+      </section>
+
+      <section id="rose" class="page-section" data-step="4" aria-labelledby="rose-title">
+        <div class="rose-section">
+          <div class="rose-copy reveal">
+            <p class="eyebrow light">Langkah 5 · Satu Mawar, Empat Pesan</p>
+            <h2 id="rose-title">Untuk setiap kelopak yang jatuh...</h2>
+            <p id="rose-instruction">Sentuh kelopaknya, lalu biarkan ia menyampaikan sesuatu yang mungkin sulit kuucapkan langsung.</p>
+          </div>
+          <div id="rose-stage" class="rose-stage reveal">
+            <div id="petal-fall-layer" class="petal-fall-layer" aria-hidden="true"></div>
+            <button id="rose-button" class="rose-plant" type="button" aria-label="Sentuh kelopak mawar" aria-describedby="rose-instruction">
+              <span class="rose-bloom" aria-hidden="true">
+                <span class="rose-petal rp-1" data-removable></span><span class="rose-petal rp-2" data-removable></span>
+                <span class="rose-petal rp-3" data-removable></span><span class="rose-petal rp-4" data-removable></span>
+                <span class="rose-petal rp-5"></span><span class="rose-petal rp-6"></span>
+                <span class="rose-petal rp-7"></span><span class="rose-petal rp-8"></span><span class="rose-heart"></span>
+              </span>
+              <span class="rose-stem" aria-hidden="true"><span class="rose-leaf leaf-left"></span><span class="rose-leaf leaf-right"></span></span>
+            </button>
+            <div id="rose-message" class="rose-message" aria-live="polite"><span>01</span><p>Sentuh mawar untuk membuka pesan pertama.</p></div>
+            <div id="petal-progress" class="petal-progress" aria-label="0 dari 4 pesan terbuka"><span></span><span></span><span></span><span></span></div>
+            <p id="rose-prompt" class="rose-prompt">Sentuh kelopaknya…</p>
+            <div id="bubble-ending" class="bubble-ending" hidden tabindex="-1" aria-live="polite">
+              <div id="bubble-field" class="bubble-field" aria-hidden="true"></div>
+              <div class="main-bubble"><span>I Love You</span><small>Andini</small></div>
+              <p>Dan semua pesan itu selalu bermuara pada tiga kata ini.</p>
+            </div>
+          </div>
+          <div id="rose-back" class="rose-back"><button class="button button-outline-light journey-back" data-back="pedia">← Kembali ke Ensiklopedia</button></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="install-dialog" class="install-dialog"><button class="modal-close" aria-label="Tutup petunjuk">×</button><span class="install-icon">A♥</span><h2>Pasang “Untuk Andini”</h2><div id="install-copy"></div><button id="install-confirm" class="button button-primary" hidden>Pasang Sekarang</button></dialog>
+
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <audio id="background-music" loop preload="none"></audio>
+  <script src="./js/data.js?v=14"></script>
+  <script src="./js/storage.js?v=14"></script>
+  <script src="./js/animations.js?v=14"></script>
+  <script src="./js/rose.js?v=14"></script>
+  <script src="./js/app.js?v=14"></script>
+</body>
+</html>
