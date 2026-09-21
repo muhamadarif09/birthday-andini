@@ -1,0 +1,49 @@
+@keyframes pageIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes giftIdle { 0%, 100% { transform: rotate(-1deg) translateY(0); } 50% { transform: rotate(1deg) translateY(-8px); } }
+@keyframes giftShake { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-9px) rotate(-4deg); } 40% { transform: translateX(9px) rotate(4deg); } 60% { transform: translateX(-7px) rotate(-3deg); } 80% { transform: translateX(7px) rotate(3deg); } }
+@keyframes lidOpen { 0% { transform: translateX(-50%); } 45% { transform: translateX(-50%) translateY(-15px) rotate(3deg); } 100% { transform: translateX(-20%) translateY(-150px) rotate(32deg); opacity: 0; } }
+@keyframes giftLight { to { transform: scale(4.5); opacity: 1; } }
+@keyframes sparkleOut { from { opacity: 1; transform: translate(0, 0) scale(.5); } to { opacity: 0; transform: translate(var(--x), var(--y)) scale(1.8) rotate(120deg); } }
+@keyframes introReveal { from { opacity: 0; transform: translateY(30px); filter: blur(9px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes orbit { to { transform: rotate(360deg); } }
+@keyframes ambientFloat { 0% { opacity: 0; transform: translateY(105vh) rotate(0); } 12%, 80% { opacity: .3; } 100% { opacity: 0; transform: translateY(-10vh) rotate(180deg); } }
+@keyframes flowerSway { 0%, 100% { transform: rotate(-5deg); } 50% { transform: rotate(4deg); } }
+@keyframes toastIn { from { opacity: 0; transform: translateY(15px); } }
+@keyframes rosePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.035); } }
+@keyframes petalDrop {
+  0% { opacity: 1; transform: translate3d(-50%, -50%, 0) rotate(0deg) scale(1); }
+  35% { opacity: 1; transform: translate3d(-50%, 110px, 0) rotate(70deg) scale(.96); }
+  100% { opacity: 0; transform: translate3d(calc(-50% + var(--petal-drift)), 410px, 0) rotate(var(--petal-turn)) scale(.78); }
+}
+@keyframes messageFloatIn { from { opacity: 0; transform: translateY(16px) scale(.98); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes endingFadeIn { from { opacity: 0; backdrop-filter: blur(0); } to { opacity: 1; backdrop-filter: blur(8px); } }
+@keyframes bubbleRise {
+  0% { opacity: 0; transform: translate3d(0, 80px, 0) scale(.7); }
+  14% { opacity: var(--bubble-opacity, .5); }
+  100% { opacity: 0; transform: translate3d(var(--bubble-drift, 12px), -115vh, 0) scale(1.08); }
+}
+@keyframes mainBubbleReveal { from { opacity: 0; transform: translateY(45px) scale(.65); filter: blur(10px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes softHeartbeat { 0%, 100% { transform: scale(1); } 45% { transform: scale(1.045); } }
+
+.gift:not(.opening) { animation: giftIdle 3s ease-in-out infinite; }
+.gift.opening { animation: giftShake .55s ease; }
+.gift.opening .gift-lid { animation: lidOpen .9s .55s ease forwards; }
+.gift.opening .gift-glow { animation: giftLight 1.5s .55s ease forwards; }
+.gift-spark { position: fixed; z-index: 120; pointer-events: none; color: #ffd5df; animation: sparkleOut 1.3s ease forwards; }
+.intro-screen.playing .intro-kicker { animation: introReveal .9s .2s ease forwards; }
+.intro-screen.playing h1 { animation: introReveal 1s .7s ease forwards; }
+.intro-screen.playing .intro-cta { animation: introReveal .8s 2.7s ease forwards; }
+.intro-orbit { animation: orbit 24s linear infinite; }
+.bouquet { animation: flowerSway 5s ease-in-out infinite; transform-origin: bottom; }
+.rose-plant.is-blooming .rose-bloom { animation: rosePulse .55s ease; }
+.rose-message.message-visible { animation: messageFloatIn .7s cubic-bezier(.2, .8, .2, 1) both; }
+.falling-rose-petal { animation: petalDrop 1.35s cubic-bezier(.2, .7, .3, 1) forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+  #ambient-particles, .blob { display: none; }
+  .bubble-ending { backdrop-filter: none; }
+  .dream-bubble { display: none; }
+  .main-bubble { opacity: 1; transform: none; filter: none; animation: none !important; }
+}

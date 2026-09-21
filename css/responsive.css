@@ -1,0 +1,95 @@
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr 1fr; gap: 30px; }
+  .memory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .encyclopedia-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+  .section-wrap { width: min(100% - 28px, 620px); padding: 105px 0 70px; }
+  .section-heading { display: block; margin-bottom: 34px; }
+  .section-heading > p { margin-top: 14px; }
+  .journey-header { top: 8px; grid-template-columns: 1fr auto; width: calc(100% - 18px); min-height: 66px; padding: 8px 9px 11px 12px; border-radius: 20px; }
+  .mini-brand strong { display: none; }
+  .mini-brand > span { width: 36px; height: 36px; }
+  .step-status { grid-column: 1 / 3; grid-row: 1; pointer-events: none; }
+  .header-actions { grid-column: 2; grid-row: 1; }
+  .icon-button { width: 38px; height: 38px; }
+  .settings-menu { top: 70px; }
+  .step-track { right: 16px; bottom: 5px; left: 16px; }
+  .journey-controls { position: relative; display: grid; grid-template-columns: auto 1fr; margin-top: 52px; }
+  .journey-controls .journey-next { width: 100%; }
+  .next-hint { font-size: .68rem; }
+
+  .hero { display: block; min-height: auto; padding-top: 110px; }
+  .hero-copy h1 { font-size: clamp(3rem, 14vw, 5rem); }
+  .hero-art { min-height: 455px; margin-top: 42px; }
+  .moon-card { inset: 10px 4px; }
+  .note-one { right: 0; }
+  .note-two { left: 0; }
+
+  .envelope { height: 480px; }
+  .letter-paper { right: 4%; left: 4%; min-height: 570px; padding: 34px 27px; }
+  .letter-paper h3 { font-size: 1.75rem; }
+  .envelope.open { height: 1000px; }
+  .envelope.open .letter-paper { transform: translateY(-105px); }
+  .envelope.open .envelope-front { transform: translateY(130px) scale(.97); }
+  .after-action { margin-top: 25px; }
+
+  .memory-grid { gap: 22px 12px; }
+  .memory-frame:nth-child(even) { transform: translateY(12px) rotate(.7deg); }
+  .photo-mat { padding: 8px; }
+  .frame-flower { transform: scale(.84); }
+
+  .pedia-masthead { align-items: start; }
+  .issue-stamp { display: none; }
+  .journal-label { margin-bottom: 18px; }
+  .encyclopedia-intro { grid-template-columns: 68px 1fr; gap: 18px; }
+  .encyclopedia-mark { width: 68px; height: 68px; }
+  .encyclopedia-entry { padding: 25px 23px; }
+
+  .rose-section { width: min(100% - 22px, 620px); padding-bottom: 60px; }
+  .rose-stage { min-height: 670px; padding: 32px 14px 26px; }
+  .rose-plant { transform: scale(.9); }
+  .rose-message { width: min(100% - 24px, 510px); min-height: 128px; padding: 24px 22px; }
+  .rose-back { left: 14px; }
+  .main-bubble { width: min(76vw, 310px); aspect-ratio: 1; }
+
+  .install-dialog { padding: 34px 24px; }
+  .toast-region { right: 11px; bottom: 14px; left: 11px; }
+  .toast { max-width: none; }
+}
+
+@media (max-width: 390px) {
+  .section-wrap { width: calc(100% - 22px); }
+  .gift { transform: scale(.9); }
+  .header-actions .icon-button:nth-child(1) { display: none; }
+  .hero-art { min-height: 415px; }
+  .moon-card { padding: 25px 19px; }
+  .bouquet { transform: scale(.88); }
+  .letter-paper { padding: 30px 19px; }
+  .letter-paper p { font-size: .89rem; }
+  .journey-controls { grid-template-columns: 1fr; }
+  .journey-controls .journey-back { order: 2; }
+
+  .memory-grid { gap: 18px 9px; }
+  .photo-mat { padding: 6px; border-radius: 17px; }
+  .memory-frame:nth-child(even) { transform: translateY(9px) rotate(.5deg); }
+  .frame-flower { transform: scale(.72); }
+  .frame-leaf { transform: scale(.76); }
+
+  .encyclopedia-intro { grid-template-columns: 1fr; }
+  .encyclopedia-mark { width: 62px; height: 62px; }
+  .encyclopedia-entry { padding: 22px 19px; }
+  .entry-heading { display: block; }
+  .entry-category { display: inline-block; margin-top: 9px; }
+
+  .rose-copy h2 { font-size: clamp(2.5rem, 13vw, 3.7rem); }
+  .rose-stage { min-height: 640px; padding-inline: 8px; }
+  .rose-plant { transform: scale(.82); }
+  .rose-message { min-height: 142px; padding: 22px 17px; font-size: .93rem; }
+  .petal-progress { gap: 9px; }
+  .petal-progress span { width: 23px; }
+  .rose-back { bottom: 14px; left: 8px; }
+  .main-bubble { width: min(80vw, 290px); }
+  .main-bubble span { font-size: clamp(2.2rem, 13vw, 3.5rem); }
+}
